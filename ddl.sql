@@ -25,7 +25,8 @@ CREATE TABLE IF NOT EXISTS professors(
     phone_number VARCHAR(30) NOT NULL,
     email VARCHAR(30) NOT NULL,
     professor_from_date DATE NOT NULL,
-    address VARCHAR(50) NOT NULL
+    address VARCHAR(50) NOT NULL,
+	Shedule VARCHAR(15) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS course(
@@ -75,16 +76,16 @@ INSERT INTO subjects (id_subject, subject_name) VALUES
 (10, 'Art History');
 
 INSERT INTO professors (id_professor, first_name, last_name, phone_number, email, professor_from_date, address) VALUES
-(1, 'Alice', 'White', '555-9001', 'alice.white@uni.edu', '2010-08-15', '1 Faculty Lane'),
-(2, 'Bob', 'Green', '555-9002', 'bob.green@uni.edu', '2012-05-20', '2 University Dr'),
-(3, 'Charlie', 'Black', '555-9003', 'charlie.black@uni.edu', '2015-01-10', '3 Academic Ave'),
-(4, 'Diana', 'King', '555-9004', 'diana.king@uni.edu', '2018-09-01', '4 Scholar St'),
-(5, 'Edward', 'Scott', '555-9005', 'edward.scott@uni.edu', '2016-03-12', '5 Research Rd'),
-(6, 'Fiona', 'Hall', '555-9006', 'fiona.hall@uni.edu', '2019-11-05', '6 Lecture Blvd'),
-(7, 'George', 'Adams', '555-9007', 'george.adams@uni.edu', '2011-07-22', '7 Campus Way'),
-(8, 'Hannah', 'Baker', '555-9008', 'hannah.baker@uni.edu', '2014-02-14', '8 Mentor Pl'),
-(9, 'Ian', 'Clark', '555-9009', 'ian.clark@uni.edu', '2020-08-30', '9 Professor Ct'),
-(10, 'Julia', 'Lewis', '555-9010', 'julia.lewis@uni.edu', '2013-10-01', '10 Dean Drive');
+(1, 'Alice', 'White', '555-9001', 'alice.white@uni.edu', '2010-08-15', '1 Faculty Lane', 'Morning'),
+(2, 'Bob', 'Green', '555-9002', 'bob.green@uni.edu', '2012-05-20', '2 University Dr','Morning'),
+(3, 'Charlie', 'Black', '555-9003', 'charlie.black@uni.edu', '2015-01-10', '3 Academic Ave','Morning'),
+(4, 'Diana', 'King', '555-9004', 'diana.king@uni.edu', '2018-09-01', '4 Scholar St','Evening'),
+(5, 'Edward', 'Scott', '555-9005', 'edward.scott@uni.edu', '2016-03-12', '5 Research Rd','Evening'),
+(6, 'Fiona', 'Hall', '555-9006', 'fiona.hall@uni.edu', '2019-11-05', '6 Lecture Blvd','Evening'),
+(7, 'George', 'Adams', '555-9007', 'george.adams@uni.edu', '2011-07-22', '7 Campus Way','Evening'),
+(8, 'Hannah', 'Baker', '555-9008', 'hannah.baker@uni.edu', '2014-02-14', '8 Mentor Pl','Morning'),
+(9, 'Ian', 'Clark', '555-9009', 'ian.clark@uni.edu', '2020-08-30', '9 Professor Ct','Morning'),
+(10, 'Julia', 'Lewis', '555-9010', 'julia.lewis@uni.edu', '2013-10-01', '10 Dean Drive', 'Evening');
 
 INSERT INTO course (id_course, id_subject, id_professor) VALUES
 (1, 1, 1),
